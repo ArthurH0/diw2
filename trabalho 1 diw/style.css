@@ -1,0 +1,185 @@
+/* INICIO MEDIA QUERIE*/
+
+
+/*INICIO CABEÇALHO */
+
+.header{
+  font-family: Arial, Helvetica, sans-serif;
+
+  
+}
+p{
+  vertical-align: top;
+}
+
+ div> ul >li{
+  text-decoration: none;
+
+  list-style: none;
+}
+
+.header a{
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.header a:hover{
+  color: orange;
+  opacity: 0.7;
+}
+
+.header a:active{
+  color: purple;
+}
+
+.header li{
+  list-style: none;
+  margin-left: 20px;
+  font-size: 15px;
+}
+
+.cart{
+  background-color: grey;
+  color: white;
+  border-style: solid;
+  border-color: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 15px;
+  width: 200px;
+  height: 80px;
+  vertical-align: center;
+}
+
+.cart:hover{
+  opacity: 0.7;
+}
+
+.cart:active{
+  background-color: orange;
+}
+
+
+
+.procura{
+  width: 500px;
+  height: 50px;
+  font-size: 20px;
+  align-items: bottom;
+}
+
+.bprocura{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background-color: grey;
+  color:white;
+  border-style: solid;
+  border-color: white;
+  border-radius: 20px;
+}
+
+.bprocura:hover{
+  background-color: orange;
+}
+
+.cash{
+  font-size: 20px;
+  padding: 20px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: text-top;
+  align-items: center;
+}
+
+/*FIM CABEÇALHO */
+
+/* INICIO CORPO */
+
+.container{
+  display:grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+
+}
+
+.bprocurar{
+  background-color: rgb(12, 94, 247) ;
+  color: white;
+  border-style: solid;
+  border-color: black;
+  margin-top: 5px;
+  height: 50px;
+  border-radius: 10px;
+  
+}
+
+.bprocurar:hover{
+  background-color: rgb(255, 255, 255) ;
+  opacity: 0.8;
+}
+
+.bprocurar:active{
+  background-color: rgb(68, 2, 68);
+}
+
+.container1{
+  width: 100%;
+}
+
+.select1{
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 100%;
+
+}
+
+.select2{
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin-top: 5px;
+  width: 100%
+  
+}
+
+
+.footer>div>ul>a{
+  list-style: none;
+}
+
+
+@media screen and (max-width:931px ){
+
+  #cash1{
+    font-size:0px;
+  }
+ 
+}
+  
+@media sreen and (max-width:575){
+ #cancelamentos{
+  font-size: 5px;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
