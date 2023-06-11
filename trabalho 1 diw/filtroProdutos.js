@@ -15,12 +15,13 @@ function carregarProdutos(dados) {
     for (let i = 0; i < loja.length; i++) {
       var produtoatual = loja[i];
       var cardproduto =
-        `<div class="col-10 col-sm-6 col-md-6 col-lg-3 mt-5  ">
+        `<div class="col-10 col-sm-6 col-md-4 col-lg-4 col-xl-3 mt-5  ">
         <div class="card w-100" style="width: 18rem;">
-        <a href="detalhes.html" onclick="mostrarDetalhes()"><img class="card-img-top" style="height: 300px;" src="${produtoatual.image}" alt=""></a>
+        <img class="card-img-top" style="height: 300px;" src="${produtoatual.image}" alt="">
         <div class="card-body">
-          <h5 class="card-title">${produtoatual.title}</h5>
+          <h5 class="card-title"><a href="detalhes.html?id=${produtoatual.id}">${produtoatual.title}</h5></a>
           <p class="card-text">$ ${produtoatual.price}</p>
+          <p class="card-text"> ${produtoatual.category}</p>
           <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
         </div>
       </div>
@@ -33,50 +34,46 @@ function carregarProdutos(dados) {
 }
 
 function filtroinput(){
-
-  var textoparafiltrar = document.getElementById("textinput").value;
+  var textoparafiltrar = document.getElementById("TextoFiltro").value;
   filtrar(textoparafiltrar);
+  
 }
 
 function filtrar(texto){
-var nomedoFiltro = getElementById("produtosfiltro");
+var nomedoFiltro = document.getElementById("NomeFiltro");
+var cards = document.getElementsByClassName("card");
+var produtos;
+
+for(let i = 0; i < cards.length; i++){
+  produtos = cards[i];
+  produtos.style.display="flex";
+
 
 }
 
-function mostrarDetalhes(){
+if (texto.length   > 0 ){
 
-  var detalhesProduto = document.getElementById("principalDetalhes");
-  var detalhes = "";
+  nomedoFiltro.style.display="block";
+  nomedoFiltro.textContent = "Busca por :"+texto;
 
-  for (let i = 0; i <= 1; i++) {
-    loja.push(dados[i])
+  for(let i = 0; i < cards.length; i++){
+    produtos = cards[i];
+    var paragrafo = produtos.getElementsByClassName("category").item(0);
+    var generos = paragrafo.textContent.toLocaleLowerCase();
   }
 
-  if (loja.length == 0) {
-    stringproducts = "<h1 class='text-center-mt-5'> Vazio </h1>"
-    stringproducts += "<h1 class:'text-center'> Deseja adicionar? </h1>"
+  if(!generos.includes(texto.toLocaleLowerCase())){
+    produtos.style.display="none";
   }
 
-  else {
-    for (let i = 0; i < loja.length; i++) {
-      var produtoatual = loja[i];
-      var cardproduto =
-        `<div class="col-10 col-sm-6 col-md-6 col-lg-3 mt-5  ">
-        <div class="card w-100" style="width: 18rem;">
-        <a href="detalhes.html" onclick="mostrarDetalhes()"><img class="card-img-top" style="height: 300px;" src="${produtoatual.image}" alt=""></a>
-        <div class="card-body">
-          <h5 class="card-title">${produtoatual.title}</h5>
-          <p class="card-text">$ ${produtoatual.price}</p>
-          <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
-        </div>
-      </div>
-      </div>`;
-
-      htmlprodutos += cardproduto;
-    }
-  }
-  conteudoprincipal.innerHTML += htmlprodutos;
 }
+else{
+  nomedoFiltro.style.display="none";
+}
+
+}
+
+
 
  
 
