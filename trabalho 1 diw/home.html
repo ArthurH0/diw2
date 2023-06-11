@@ -20,19 +20,23 @@
       <div class="container-fluid bg-secondary ">
         <div class="row align-items-center d-flex justify-content-center mx-auto">
 
-          <div class="col-5">
-            <p>Bem vindo!</p>
+          <div class=" col-4 col-sm-2 col-md-2 col-lg-2 col-xl-2 mx-auto my-auto mb-3 mt-3">
+            <img class="img-fluid" src="img/Pink Typography Initial LA Logo.png">
+          </div>
+
+          <div class="col-sm-5 col-md-5 col-lg-5 mt-5 mb-3">
+            <p>Bem vindo à EveryThing!</p>
 
             <div class="input-group">
-              <input type="text" class="form-control w-25" placeholder="Pesquise por produtos!"
+              <input type="text" id="TextoFiltro" class="form-control w-25" placeholder="Pesquise por produtos!"
                 aria-label="Recipient's username" aria-describedby="basic-addon2">
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary bg-body" type="button"
-                  onclick="filtroinput()">Pesquisar</button>
+                <a id="BPesquisa" class="btn btn-outline-secondary bg-body" href="pesquisa.html" type="button"
+                  onclick="filtroinput()">Pesquisar</a>
               </div>
             </div>
           </div>
-          <div class="col-2 ">
+          <div class="col-sm-5 col-md-5 col-lg-5 col-xl-3 d-flex">
             <button class="btn btn-outline-light m-auto w-25 bg-secondary w-50 mb-2 mt-5">
               <i class="fa fa-shopping-cart " style="font-size:24px"></i>
               <br>
@@ -67,13 +71,14 @@
 
 
 
+  <div class="card">
 
-    <div class="container mb-5 mt-5">
-      <div class="row">
-        <div class="container">
-          <h3 id="produtosfiltro"></h3>
-          <div class="row d-flex justify-content-center" id="principal">
-          </div>
+  </div>
+
+  <div class="container mb-5 mt-5">
+    <div class="row">
+      <div class="container">
+        <div class="row d-flex justify-content-center" id="principal">
         </div>
       </div>
     </div>
@@ -81,65 +86,18 @@
 
 
 
-  <div class="container-fluid">
 
-    <div class="row">
-
-      <div class="col-3 bg-secondary text-light">
-        Metodos de pagamento
-        <br>
-        <a href="#"><i class="fa-brands fa-cc-visa" style="color: #000000;"></i></a>
-        <a href="#"> <i class="fa-brands fa-cc-mastercard" style="color: #000000;"></i> </a>
-        <br>
-        <a href="#"> <i class="fa-brands fa-cc-apple-pay" style="color: #000000;"></i> </a>
-        <a href="#"> <i class="fa-brands fa-google-pay" style="color: #000000;"></i> </a>
-        <br>
-        <a href="#"> <i class="fa-brands fa-amazon-pay" style="color: #000000;"></i> </a>
+  <footer>
+    <div class="container-fluid bg-secondary">
+      <div class="row d-flex">
+        <p class="text-center"> © Arthur Henrique - Análise e desenvolvimento de Sistemas - 819877 </p>
       </div>
-
-      <div class="col-3 bg-secondary text-light">
-        Atalhos
-        <p class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover flex-wrap">
-          <a href="#"> Ajuda </a>
-        </p>
-        <p>
-          <a href="#"> Politica </a>
-        </p>
-
-        <p>
-          <a id="cancelamentos" href="#"> Cancelamentos e <br>
-            trocas</a>
-        </p>
-
-        <p>
-          <a href="#"> FAQ </a>
-        </p>
-      </div>
-      <div class="col-3 bg-secondary text-light">
-        <p>Redes sociais</p>
-        <a href="#"><i class="fa-brands fa-cc-visa" style="color: #000000;"></i></a>
-        <a href="#"> <i class="fa-brands fa-tiktok" style="color: #000000;"></i></i> </a>
-        <br>
-        <a href="#"> <i class="fa-brands fa-instagram" style="color: #000000;"></i> </a>
-        <a href="#"> <i class="fa-brands fa-twitter" style="color: #000000;"></i> </a>
-        <br>
-        <a href="#"> <i class="fa-brands fa-facebook-f" style="color: #000000;"></i> </a>
-      </div>
-      <div class="col-3 bg-secondary text-light">
-        <p>Contate-nos</p>
-        <p>Endereço:<br>
-        <p>Lugar</p>
-        <p>E-Mail</p>
-        <p>Telefone</p>
-      </div>
-      <div class="col-12 text-center text-light bg-secondary">
-        <p> © 2023 Nike.com </p>
-      </div>
-      </footer>
     </div>
+  </footer>
 
-    <script src="filtroProdutos.js"></script>
-    <script src="dados.js"></script>
+
+  <script src="filtroProdutos.js"></script>
+  <script src="dados.js"></script>
 
 
 
